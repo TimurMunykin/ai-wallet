@@ -1,24 +1,25 @@
-# AI Chat with UI Snippets
+# AI Финансовый Помощник
 
-An innovative React TypeScript chat application that can generate and render interactive UI components in real-time using OpenAI's GPT models.
+Умный финансовый помощник с интерактивными виджетами, созданный на React TypeScript с использованием OpenAI GPT. Ведите учет финансов в естественном чате с автоматической генерацией красивых UI-компонентов.
 
-## ✨ Features
+## ✨ Возможности
 
-- **Interactive Chat Interface**: Clean, modern chat UI with real-time messaging
-- **Dynamic UI Component Generation**: Ask the AI to create UI components and see them rendered instantly
-- **Safe Code Execution**: Components are safely compiled and executed using Babel
-- **TypeScript Support**: Full type safety throughout the application
-- **Modern Styling**: Beautiful UI with Tailwind CSS
-- **Component Preview**: Toggle between rendered components and source code
+- **Умный Чат**: Естественное общение с ИИ-помощником о ваших финансах
+- **Динамические Виджеты**: Автоматическая генерация интерактивных компонентов для визуализации данных
+- **Учет Доходов/Расходов**: Просто скажите "потратил 500₽ на продукты" и система всё поймет
+- **Регулярные Платежи**: Отслеживание подписок и периодических трат
+- **Аналитика**: Красивые графики и диаграммы трат по категориям
+- **Баланс в Реальном Времени**: Актуальная информация о состоянии финансов
 
-## 🚀 What Makes This Special
+## 🚀 Что делает это особенным
 
-This isn't just another chatbot - it's a creative coding companion that can:
+Это не просто трекер расходов - это персональный финансовый консультант, который:
 
-- Generate interactive buttons, forms, charts, and other UI elements
-- Create complete mini-applications within chat messages
-- Provide both visual components and their source code
-- Demonstrate React patterns and best practices
+- Понимает естественный язык ("купил кофе за 200 рублей")
+- Генерирует красивые виджеты для каждого запроса
+- Задает уточняющие вопросы когда нужно
+- Создает интерактивные графики и аналитику
+- Напоминает о предстоящих платежах
 
 ## 🛠️ Setup
 

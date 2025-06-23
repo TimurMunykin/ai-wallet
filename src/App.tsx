@@ -1,8 +1,8 @@
-import { ChatInterface } from './components/ChatInterface';
+import { FinanceChatInterface } from './components/FinanceChatInterface';
 import './App.css';
 
 function App() {
-  return <ChatInterface />;
+  return <FinanceChatInterface />;
 }
 
 export default App;

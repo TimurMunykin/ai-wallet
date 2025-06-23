@@ -35,7 +35,7 @@ export const ChatMessageComponent: React.FC<ChatMessageProps> = ({ message }) =>
         </div>
 
         {message.uiSnippet && (
-          <div className="mt-4">
+          <div className="">
             <UISnippetRenderer snippet={message.uiSnippet} />
           </div>
         )}

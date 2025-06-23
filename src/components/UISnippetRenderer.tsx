@@ -40,6 +40,12 @@ const scope = {
 export const UISnippetRenderer: React.FC<UISnippetRendererProps> = ({ snippet }) => {
   const [showCode, setShowCode] = useState(false);
 
+  // Создаем scope с добавлением props если они есть
+  const componentScope = {
+    ...scope,
+    ...(snippet.props || {})
+  };
+
   if (snippet.language !== 'jsx' && snippet.language !== 'tsx') {
     return (
       <div className="ui-snippet-container">
@@ -60,8 +66,7 @@ export const UISnippetRenderer: React.FC<UISnippetRendererProps> = ({ snippet })
 
   return (
     <div className="ui-snippet-container">
-      <div className="flex justify-between items-center mb-4">
-        <span className="text-sm font-medium text-gray-600">Interactive UI Component</span>
+      <div className="flex justify-end items-center mb-2">
         <button
           onClick={() => setShowCode(!showCode)}
           className="text-xs px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded transition-colors font-medium"
@@ -72,7 +77,7 @@ export const UISnippetRenderer: React.FC<UISnippetRendererProps> = ({ snippet })
 
       <LiveProvider
         code={snippet.code}
-        scope={scope}
+        scope={componentScope}
         theme={{
           plain: {
             color: '#393A34',
@@ -138,11 +143,11 @@ export const UISnippetRenderer: React.FC<UISnippetRendererProps> = ({ snippet })
         }}
       >
         {/* Live Preview */}
-        <div className="border border-gray-200 rounded-lg p-6 bg-gray-50 mb-4">
+        <div className="border border-gray-200 rounded-lg bg-gray-50 mb-2">
           <ErrorBoundary>
             <LivePreview />
           </ErrorBoundary>
-          <LiveError className="mt-4 p-3 bg-red-50 border border-red-200 rounded text-red-700 text-sm" />
+          <LiveError className="mt-2 p-2 bg-red-50 border border-red-200 rounded text-red-700 text-sm" />
         </div>
 
         {/* Code Editor */}
@@ -164,10 +169,6 @@ export const UISnippetRenderer: React.FC<UISnippetRendererProps> = ({ snippet })
           </div>
         )}
       </LiveProvider>
-
-      {snippet.description && (
-        <p className="text-sm text-gray-600 mt-3 italic">{snippet.description}</p>
-      )}
     </div>
   );
 };
