@@ -66,7 +66,7 @@ function Component() {
   return (
     <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
       <form onSubmit={handleSubmit} className="mb-4">
-        <input 
+        <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           className="w-full p-2 border rounded"
